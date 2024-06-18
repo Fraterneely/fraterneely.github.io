@@ -132,6 +132,79 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </div>
+    <div class="marquee">
+        <div class="marquee-content" id="marquee-content">
+            
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const marqueeContent = document.getElementById("marquee-content");
+            
+                async function fetchMarketData() {
+                    try {
+                        const apiKey = '2zZLR2UK31v6wa9501nW1ykjW9PB3tAf';
+                        const symbols = ['NVDA','AAPL','GOOGL','MSFT','AMZN','TSLA','FB','NFLX','JPM','JNJ','V','WMT','PG','DIS','MA', 'UNH', 'HD', 'PYPL', 'VZ', 'ADBE'];
+            
+                        const baseUrl = `https://api.polygon.io/v2/aggs/ticker`;
+            
+                        let content = '';
+                        
+                        for (let symbol of symbols) {
+                            const response = await fetch(`${baseUrl}/${symbol}/prev?adjusted=true&apiKey=${apiKey}`);
+                            const data = await response.json();
+            
+                            if (data.results && data.results.length > 0) {
+                                const result = data.results[0];
+                                const change = result.c - result.o;
+                                const changePercent = ((change / result.o) * 100).toFixed(2);
+                                const changeClass = change >= 0 ? 'green' : 'red';
+                                content += `<span class="${changeClass}">${symbol}: ${result.c.toFixed(2)} (${changePercent}%)</span> `;
+                            }
+                        }
+            
+                        marqueeContent.innerHTML = content;
+                    } catch (error) {
+                        console.error("Error fetching market data:", error);
+                    }
+                }
+            
+                fetchMarketData();
+                setInterval(fetchMarketData, 60000); // Update every minute
+            });
+        </script>
+        <style>
+            .marquee {
+                width: 100%;
+                overflow: hidden;
+                background: #fff;
+                color: #000;
+                white-space: nowrap;
+            }
+            
+            .marquee-content {
+                display: inline-block;
+                padding: 10px;
+                animation: marquee 15s linear infinite;
+            }
+            
+            @keyframes marquee {
+                from { transform: translateX(100%); }
+                to { transform: translateX(-100%); }
+            }
+            
+            .green {
+                color: green;
+                padding: 20px 20px;
+                font-weight: bold;
+            }
+            
+            .red {
+                color: red;
+                padding: 20px 20px;
+                font-weight: bold;
+            }
+        </style>
+    </div>
   <!-- end header inner --> 
 </header>
 <!-- end header -->
