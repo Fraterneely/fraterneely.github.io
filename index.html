@@ -166,7 +166,7 @@ crossorigin="anonymous"></script>
                 }
             
                 fetchMarketData();
-                setInterval(fetchMarketData, 60000); // Update every minute
+                setInterval(fetchMarketData, 20000); // Update every minute
             });
         </script>
         <style>
@@ -182,11 +182,6 @@ crossorigin="anonymous"></script>
                 display: inline-block;
                 padding: 10px;
                 animation: marquee 15s linear infinite;
-            }
-            
-            @keyframes marquee {
-                from { transform: translateX(100%); }
-                to { transform: translateX(-100%); }
             }
             
             .green {
