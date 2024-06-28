@@ -304,95 +304,110 @@ crossorigin="anonymous"></script>
 
 <!-- service -->
 <div class="service">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <div class="STRONG"> <i><img src="icon/strong.png" alt="icon"/></i>
-            <h3>STRONG SECURITY</h3>
-            <p>We use strong security measures, to ensure that KNOWN Corp's clients are well protected, and their sensitive information</p>
-          </div>
-        </div>
-        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-          <div class="world"> <i><img src="icon/world.png" alt="icon"/></i>
-            <h3>WORLD COVERAGE</h3>
-            <p>Our services is accessible to anyone who is willing to access them.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-        <div class="service-box">
-          <h2>our <strong class="cur">services</strong></h2>
-          <p>Discover KNOWN Corp's diverse ventures redefining industries in our exclusive video.</p>
-          <br>
-          <style>
-              /* Style for the video player */
-              .video-player {
-                width: 100%;
-                max-width: 800px;
-                margin: 0 auto;
-              }
+  <section id="news-summary" class="news-summary"></section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const newsSummary = document.getElementById("news-summary");
 
-              /* Style for the controls */
-              .video-player-controls {
-                background-color: #3b8bcd; /* Adjusted color as per your request */
-                color: white;
-                padding: 10px;
-              }
+            async function fetchLatestNews() {
+                var myHeaders = new Headers();
+                myHeaders.append("apikey", "tEy1EeemF68kUysKWfCvx61vX7uD6xpS");
 
-              /* Style for the individual control buttons */
-              .video-player-controls button {
-                background-color: transparent;
-                border: none;
-                color: white;
-                cursor: pointer;
-                margin: 0 5px;
-                padding: 5px 10px;
-              }
+                var requestOptions = {
+                    method: 'GET',
+                    redirect: 'follow',
+                    headers: myHeaders
+                };
 
-              /* Style for the progress bar */
-              .video-progress {
-                width: 100%;
-                background-color: #ccc;
-                height: 5px;
-                margin-top: 5px;
-              }
+                try {
+                    console.log("Fetching latest news...");
+                    const response = await fetch("https://api.apilayer.com/financelayer/news?limit=2&sort=desc&sources=cnbc.com&date=today", requestOptions);
+                    console.log("Response status:", response.status);
+                    const result = await response.text();
+                    console.log("Raw result received:", result);
 
-              /* Style for the progress bar fill */
-              .video-progress-fill {
-                background-color: #3b8bcd; /* Adjusted color as per your request */
-                height: 100%;
-              }
+                    const data = JSON.parse(result);
+                    console.log("Parsed data received:", data);
 
-              </style>
-            <div class="video-player">
-              <video class="video-player" id="myVideo">
-                <source src="images/BAHATIArt Adverting video.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-              </video>
-              <div class="video-player-controls">
-                <button onclick="document.getElementById('myVideo').play()">Play</button>
-                <button onclick="document.getElementById('myVideo').pause()">Pause</button>
-                <div class="video-progress">
-                  <div class="video-progress-fill"></div>
-                </div>
-              </div>
-            </div>
+                    let content = '';
 
-            <script>
-            // Update progress bar as video plays
-            var video = document.getElementById("myVideo");
-            var progressBar = document.querySelector(".video-progress-fill");
+                    if (data.data) {
+                        console.log("Articles found:", data.data.length);
 
-            video.addEventListener("timeupdate", function() {
-              var percentage = (video.currentTime / video.duration) * 100;
-              progressBar.style.width = percentage + "%";
-            });
-            </script>
-        </div>
-      </div>
-    </div>
-  </div>
+                        for (const article of data.data) {
+                            const imageUrl = await fetchOgImage(article.url);
+                            const symbolsContent = await fetchSymbolData(article.tickers);
+                            content += `<div class="news-summary-item">
+                                    <div class="news-image" style="background-image: url('${imageUrl}');">
+                                        <div class="news-content">
+                                            <h3>${article.title} <span class="source">(${article.source})</span></h3>
+                                            <p>${article.description}</p>
+                                            <div class="symbols">${symbolsContent}</div>
+                                            <a href="${article.url}" target="_blank">Read more</a>
+                                        </div>
+                                    </div>
+                                </div>`;
+                        }
+                    } else {
+                        console.warn("No articles found in the response");
+                    }
+
+                    newsSummary.innerHTML = content;
+                } catch (error) {
+                    console.error("Error fetching finance news:", error);
+                }
+            }
+
+            async function fetchOgImage(url) {
+                try {
+                    const response = await fetch(url);
+                    const text = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(text, 'text/html');
+                    const meta = doc.querySelector('meta[property="og:image"]');
+                    return meta ? meta.content : './placeholder-image.png';
+                } catch (error) {
+                    console.error("Error fetching OG image:", error);
+                    return './placeholder-image.png';
+                }
+            }
+
+
+            async function fetchSymbolData(symbols) {
+                if (!symbols || symbols.length === 0) {
+                    return 'No symbols included';
+                }
+
+                const apiKey = '2zZLR2UK31v6wa9501nW1ykjW9PB3tAf';
+                let symbolsContent = '';
+
+                for (const symbol of symbols) {
+                    try {
+                        const response = await fetch(`https://api.polygon.io/v2/aggs/ticker/${symbol}/prev?apiKey=${apiKey}`, {
+                            method: 'GET'
+                        });
+
+                        const data = await response.json();
+                        const lastResult = data.results[0];
+                        const change = ((lastResult.c - lastResult.o) / lastResult.o * 100).toFixed(2);
+                        const changeClass = change >= 0 ? 'up' : 'down';
+
+                        symbolsContent += `<span class="${changeClass}">${symbol.toUpperCase()}: $${lastResult.c} (${change}%)</span>`;
+                    } catch (error) {
+                        console.error(`Error fetching data for symbol ${symbol}:`, error);
+                        symbolsContent += `<span>${symbol.toUpperCase()}: Data not available</span>`;
+                    }
+                }
+                return symbolsContent;
+            }
+
+
+
+            fetchLatestNews();
+        });
+
+
+    </script>
 </div>
 <!-- end service --> 
 
