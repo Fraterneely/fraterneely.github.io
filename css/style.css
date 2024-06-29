@@ -1540,15 +1540,6 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 	background-color: #fff;
 	padding-top: 90px;
 }
-.service h3{
-	font-size: 40px;
-	line-height: 72px;
-	font-weight: 500;
-	margin-bottom: 0px;
-	color: #333;
-	padding: 40px 0px;
-	text-transform: uppercase;
-}
 .service .STRONG {
 	background-color: #100505;
 	text-align: center;
@@ -1742,7 +1733,7 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 	border: #ff0000 solid 1px;
 }
 .footer {
-	background-color: #2b2a2a;
+	background-color: #000;
 	padding: 30px 0px;
 }
 .footer .Contact h3 {
