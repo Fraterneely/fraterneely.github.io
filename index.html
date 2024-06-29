@@ -350,7 +350,7 @@ crossorigin="anonymous"></script>
                                         <div class="news-content">
                                             <h3>${article.title} <span class="source">(${article.source})</span></h3>
                                             <p>${article.description}</p>
-                                            <div class="symbols"><b>Stocks in an Article: </b>${symbolsContent}</div>
+                                            <div class="symbols"><b>Stocks in an Article:  </b> ${symbolsContent}</div>
                                         </div>
                                     </div>
                                 </div></a>`;
@@ -402,7 +402,7 @@ crossorigin="anonymous"></script>
                         symbolsContent += `<span class="${changeClass}">${symbol.toUpperCase()}: $${lastResult.c} (${change}%)</span>`;
                     } catch (error) {
                         console.error(`Error fetching data for symbol ${symbol}:`, error);
-                        symbolsContent += `<span>${symbol.toUpperCase()};</span>`;
+                        symbolsContent += `<span>${symbol.toUpperCase()}</span>`;
                     }
                 }
                 return symbolsContent;
@@ -452,7 +452,7 @@ crossorigin="anonymous"></script>
             width: 100%;
             background: rgba(255, 255, 255, 0.6);
             color: #333;
-            padding: 20px;
+            padding: 20px 5px;
             box-sizing: border-box;
             border-radius: 0 0 8px 8px;
         }
@@ -478,6 +478,7 @@ crossorigin="anonymous"></script>
         
         .news-summary-item .symbols {
             margin-top: 10px;
+	    margin-bottom: 10px;
             padding: 10px 20px;
             border-radius: 20px;
             background-color: #333;
@@ -497,14 +498,6 @@ crossorigin="anonymous"></script>
             color: red;
         }
         
-        .news-summary-item a {
-            margin-top: 20px;
-            text-decoration: none;
-            color: #4caf50;
-            font-weight: bold;
-            font-size: 1em;
-        }
-        
         .news-summary-item a:hover {
             text-decoration: underline;
         }
@@ -516,11 +509,7 @@ crossorigin="anonymous"></script>
         }
         
         .news-summary-item a {
-            margin-top: 20px;
-            text-decoration: none;
-            color: #4caf50;
-            font-weight: bold;
-            font-size: 1em;
+           
         }
     </style>
 </div>
