@@ -1495,6 +1495,7 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 .Currency .three-box .read-more {
 	padding: 11px 20px;
 	background-color: #000;
+	border-radius: 30px;
 	color: #fff;
 	display: inline-block;
 	margin-top: 26px;
@@ -1538,6 +1539,15 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 .service {
 	background-color: #fff;
 	padding-top: 90px;
+}
+.service h3{
+	font-size: 40px;
+	line-height: 72px;
+	font-weight: 500;
+	margin-bottom: 0px;
+	color: #333;
+	padding: 40px 0px;
+	text-transform: uppercase;
 }
 .service .STRONG {
 	background-color: #100505;
@@ -1733,7 +1743,7 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 }
 .footer {
 	background-color: #2b2a2a;
-	padding: 80px 0px;
+	padding: 30px 0px;
 }
 .footer .Contact h3 {
 	color: #fff;
@@ -1801,13 +1811,6 @@ ul.socil_link li:last-child {
 	display: block;
 	padding-bottom: 25px;
 	text-transform: uppercase;
-}
-.footer .newsletter .new {
-	padding: 25px 40px;
-	padding: 21px 26px;
-	border-radius: 10px;
-	border: #fff solid 1px;
-	width: 67%;
 }
 .footer .newsletter .subscribe {
 	padding: 21px 48px;
