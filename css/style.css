@@ -1457,7 +1457,6 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 	font-weight: 500;
 }
 .Currency .three-box {
-	border-top: #ff0000 solid 2px;
 	text-align: center;
 }
 .Currency .three-box figure {
@@ -1465,12 +1464,14 @@ input[type="checkbox"] .styled:checked+label::after, input[type="radio"] .styled
 }
 .Currency .three-box figure img {
 	width: 100%;
+	border-radius: 30px;
 }
 .Currency .three-box .Bitcoin {
 	position: relative;
 	margin-top: -60px !important;
+	border-radius: 30px;
 	text-align: center;
-	box-shadow: #ddd 0px 1px 1px 1px;
+	box-shadow: #4e4e4e 4px 1px 5px 5px;
 	background-color: #fff;
 	padding: 0px 20px 26px 20px;
 	margin: 0 auto;
