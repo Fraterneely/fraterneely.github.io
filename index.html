@@ -174,6 +174,7 @@ crossorigin="anonymous"></script>
             .marquee {
                 width: 100%;
                 overflow: hidden;
+                height: 35px;
                 background: #000;
                 color: #fff;
                 white-space: nowrap;
@@ -181,7 +182,7 @@ crossorigin="anonymous"></script>
             
             .marquee-content {
                 display: inline-block;
-                padding: 10px;
+                padding: 5px 10px;
                 animation: marquee 25s linear infinite;
             }
             
@@ -192,13 +193,13 @@ crossorigin="anonymous"></script>
             
             .green {
                 color: green;
-                margin-left: 10px;
+                padding: 5px 20px;
                 font-weight: bold;
             }
             
             .red {
                 color: red;
-                margin-left: 10px;
+                padding: 5px 20px;
                 font-weight: bold;
             }
         </style>
@@ -338,16 +339,15 @@ crossorigin="anonymous"></script>
                         for (const article of data.data) {
                             const imageUrl = await fetchOgImage(article.url);
                             const symbolsContent = await fetchSymbolData(article.tickers);
-                            content += `<div class="news-summary-item">
+                            content += `<a href="${article.url}" target="_blank"><div class="news-summary-item">
                                     <div class="news-image" style="background-image: url('${imageUrl}');">
                                         <div class="news-content">
                                             <h3>${article.title} <span class="source">(${article.source})</span></h3>
                                             <p>${article.description}</p>
-                                            <div class="symbols">${symbolsContent}</div>
-                                            <a href="${article.url}" target="_blank">Read more</a>
+                                            <div class="symbols"><b>Stocks in an Article: </b>${symbolsContent}</div>
                                         </div>
                                     </div>
-                                </div>`;
+                                </div></a>`;
                         }
                     } else {
                         console.warn("No articles found in the response");
@@ -393,10 +393,10 @@ crossorigin="anonymous"></script>
                         const change = ((lastResult.c - lastResult.o) / lastResult.o * 100).toFixed(2);
                         const changeClass = change >= 0 ? 'up' : 'down';
 
-                        symbolsContent += `<span class="${changeClass}"><b>Included Symbols : </b>${symbol.toUpperCase()}: $${lastResult.c} (${change}%)</span>`;
+                        symbolsContent += `<span class="${changeClass}">${symbol.toUpperCase()}: $${lastResult.c} (${change}%)</span>`;
                     } catch (error) {
                         console.error(`Error fetching data for symbol ${symbol}:`, error);
-                        symbolsContent += `<span><b>Included Symbols :</b> ${symbol.toUpperCase()}</span>`;
+                        symbolsContent += `<span>${symbol.toUpperCase()};</span>`;
                     }
                 }
                 return symbolsContent;
@@ -541,7 +541,7 @@ crossorigin="anonymous"></script>
             <h3>HOZANA INEZA Fraterne Ely </h3>
             <span>Co-Founder</span>
             <p>Visionary leader shaping industries, driving innovation, and redefining success at KNOWN Corp.</p>
-            <div class="icon"><i> <a href="https://twitter.com/InezaEly" target="_blank"><img src="images/twitter.png"></a></i><i> <a href="https://www.instagram.com/fraterneely/" target="_blank"><img src="images/instagram.png"></a></i> </div>
+            <div class="icon"><i> <a href="https://x.com/fraterne_ely" target="_blank"><img src="images/twitter.png"></a></i><i> <a href="https://www.instagram.com/fraterneely/" target="_blank"><img src="images/instagram.png"></a></i> </div>
           </div>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
@@ -550,7 +550,7 @@ crossorigin="anonymous"></script>
             <h3>BAHATI Blaise </h3>
             <span>Co-Founder</span>
             <p>Co-founder, visionary architect shaping KNOWN Corp's dynamic landscape with innovation and ingenuity.</p>
-            <div class="icon"> <i> <a href="https://twitter.com/XBAHATIBlaise" target="_blank"><img src="images/twitter.png"></a></i> <i> <a href="https://www.instagram.com/bahatiblaise44/" target="_blank"><img src="images/instagram.png"></a></i> </div>
+            <div class="icon"> <i> <a href="https://x.com/XBAHATIBlaise" target="_blank"><img src="images/twitter.png"></a></i> <i> <a href="https://www.instagram.com/bahatiblaise44/" target="_blank"><img src="images/instagram.png"></a></i> </div>
           </div>
         </div>
         <!-- <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
@@ -567,8 +567,8 @@ crossorigin="anonymous"></script>
   </div>
 </div>
 <!-- end abouts -->
-<div class="Request">
-  <div class="container">
+<!-- <div class="Request">
+  <div class="container"> -->
 <!--     <div class="row">
       <div class="col-md-12">
         <div class="titlepage3">
@@ -586,7 +586,7 @@ crossorigin="anonymous"></script>
           <button type="submit" name="send" class="send-btn">Send</button>
         </form>
       </div> -->
-      <div style="margin: auto" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+<!--       <div style="margin: auto" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
         <div class="Request-box">
           <figure><img src="images/Request.jpg" alt="img"/></figure>
           <div class="Register">
@@ -597,7 +597,7 @@ crossorigin="anonymous"></script>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- footer -->
 <footer>
