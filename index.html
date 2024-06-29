@@ -304,6 +304,7 @@ crossorigin="anonymous"></script>
 
 <!-- service -->
 <div class="service">
+    <center><h3>Top Headlines in Finance and Markets</h3></center>
   <section id="news-summary" class="news-summary"></section>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -392,10 +393,10 @@ crossorigin="anonymous"></script>
                         const change = ((lastResult.c - lastResult.o) / lastResult.o * 100).toFixed(2);
                         const changeClass = change >= 0 ? 'up' : 'down';
 
-                        symbolsContent += `<span class="${changeClass}">${symbol.toUpperCase()}: $${lastResult.c} (${change}%)</span>`;
+                        symbolsContent += `<span class="${changeClass}"><b>Included Symbols : </b>${symbol.toUpperCase()}: $${lastResult.c} (${change}%)</span>`;
                     } catch (error) {
                         console.error(`Error fetching data for symbol ${symbol}:`, error);
-                        symbolsContent += `<span>${symbol.toUpperCase()}: Data not available</span>`;
+                        symbolsContent += `<span><b>Included Symbols :</b> ${symbol.toUpperCase()}</span>`;
                     }
                 }
                 return symbolsContent;
@@ -410,7 +411,7 @@ crossorigin="anonymous"></script>
     </script>
     <style>
         .news-summary {
-            max-width: 800px;
+            max-width: 1380px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
@@ -420,7 +421,7 @@ crossorigin="anonymous"></script>
         
         .news-summary-item {
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             border-bottom: 1px solid #eaeaea;
             padding-bottom: 20px;
         }
@@ -540,7 +541,7 @@ crossorigin="anonymous"></script>
             <h3>HOZANA INEZA Fraterne Ely </h3>
             <span>Co-Founder</span>
             <p>Visionary leader shaping industries, driving innovation, and redefining success at KNOWN Corp.</p>
-            <div class="icon"><i> <a href="https://twitter.com/InezaEly"><img src="images/twitter.png"></a></i><i> <a href="https://www.instagram.com/fraterneely/"><img src="images/instagram.png"></a></i> </div>
+            <div class="icon"><i> <a href="https://twitter.com/InezaEly" target="_blank"><img src="images/twitter.png"></a></i><i> <a href="https://www.instagram.com/fraterneely/" target="_blank"><img src="images/instagram.png"></a></i> </div>
           </div>
         </div>
         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
@@ -549,7 +550,7 @@ crossorigin="anonymous"></script>
             <h3>BAHATI Blaise </h3>
             <span>Co-Founder</span>
             <p>Co-founder, visionary architect shaping KNOWN Corp's dynamic landscape with innovation and ingenuity.</p>
-            <div class="icon"> <i> <a href="https://twitter.com/XBAHATIBlaise"><img src="images/twitter.png"></a></i> <i> <a href="https://www.instagram.com/bahatiblaise44/"><img src="images/instagram.png"></a></i> </div>
+            <div class="icon"> <i> <a href="https://twitter.com/XBAHATIBlaise" target="_blank"><img src="images/twitter.png"></a></i> <i> <a href="https://www.instagram.com/bahatiblaise44/" target="_blank"><img src="images/instagram.png"></a></i> </div>
           </div>
         </div>
         <!-- <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
