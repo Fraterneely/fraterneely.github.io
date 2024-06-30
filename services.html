@@ -156,7 +156,7 @@ crossorigin="anonymous"></script>
                                 const change = result.c - result.o;
                                 const changePercent = ((change / result.o) * 100).toFixed(2);
                                 const changeClass = change >= 0 ? 'green' : 'red';
-                                content += `<span class="${changeClass}"><a href="https://finance.yahoo.com/quote/${symbol}/">${symbol}: ${result.c.toFixed(2)} (${changePercent}%)</a></span> `;
+                                content += `<a href="https://finance.yahoo.com/quote/${symbol}/" target="_blank"><span class="${changeClass}">${symbol}: ${result.c.toFixed(2)} (${changePercent}%)</span></a> `;
                             }
                         }
             
