@@ -8,7 +8,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="PdEH7VTvz0I4NrtMMb1ep1ijQMnmfVcSGAYt6QAQn88" />
+<meta name="google" content="nositelinkssearchbox">
 <meta name="rating" content="finance">
+<meta name="googlebot" content="notranslate">
 <!-- site metas -->
 <title>KNOWN Corp - Leading Group in Finance, Tech and other Ventures</title>
 <meta name="keywords" content="Finance,
@@ -29,12 +31,12 @@ KNOWN Corp">
 <meta name="keywords" content="KNOWN Corp, company, services, team, about">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.fraterneely.github.io/">
-<meta property="og:title" content="KNOWN Corp - Leading Group in Finance, Tech and other Ventures">
+<meta property="og:title" content="KNOWN Corp - Leading Company in Finance, Tech and other Ventures">
 <meta property="og:description" content="Welcome to KNOWN Corp – your gateway to innovation and excellence in finance, technology, fashion, and more. Explore our diverse ventures and join us in shaping the future">
 <meta property="og:image" content="https://www.fraterneely.github.io/icon/favicon.png">
-<meta property="og:url" content="https://www.fraterneely.github.io/aboutus.html">
+<meta property="og:url" content="https://www.fraterneely.github.io/">
 <meta property="og:type" content="website">
-<meta name="twitter:title" content="KNOWN Corp - Leading Group in Finance, Tech and other Ventures">
+<meta name="twitter:title" content="KNOWN Corp - Leading Company in Finance, Tech and other Ventures">
 <meta name="twitter:description" content="Welcome to KNOWN Corp – your gateway to innovation and excellence in finance, technology, fashion, and more. Explore our diverse ventures and join us in shaping the future">
 <meta name="twitter:image" content="https://www.fraterneely.github.io/icon/favicon.png">
 <link rel="icon" href="icon/favicon.png">
@@ -48,13 +50,14 @@ KNOWN Corp">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "KNWON Group",
+      "name": "KNWON Corp",
       "url": "https://www.fraterneely.github.io",
-      "logo": "https://www.fraterneely.github.io/icon/back-favicon.png",
+      "logo": "https://www.fraterneely.github.io/icon/favicon.png",
       "sameAs": [
-        "https://www.facebook.com/knowngroup",
-        "https://www.twitter.com/knowngroup",
-        "https://www.linkedin.com/company/knowngroup"
+        "https://www.instagram.com/knowncorp",
+        "https://www.facebook.com/knowncorp",
+        "https://www.twitter.com/knowncorp",
+        "https://www.linkedin.com/company/knowncorp"
       ],
     }
     </script>
@@ -71,7 +74,7 @@ KNOWN Corp">
       "@type": "WebPage",
       "name": "Homepage",
       "description": "Welcome to KNOWN Corp – your gateway to innovation and excellence in finance, technology, fashion, and more. Explore our diverse ventures and join us in shaping the future",
-      "url": "https://www.fraterneely.github.io/aboutus.html"
+      "url": "https://www.fraterneely.github.io/"
     }
     </script>
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -90,12 +93,16 @@ KNOWN Corp">
 crossorigin="anonymous"></script>
       
 </head>
-
-
-	
 <!-- body -->
 <body class="main-layout">
+<!-- loader  -->
+<!-- <div class="loader_bg">
+  <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+</div> -->
+<!-- end loader --> 
+<!-- header -->
 <header> 
+  <!-- header inner -->
   <div class="container" style="max-width: 1550px;">
     <div class="row">
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
@@ -114,6 +121,8 @@ crossorigin="anonymous"></script>
                 <li> <a href="aboutus.html">About</a> </li>
                 <li> <a href="services.html">Services</a> </li>
                 <li> <a href="Team.html">Team</a> </li>
+<!--                 <li> <a href="contact.html">Contact us</a> </li> -->
+<!--                 <li> <a href="#"><img src="images/search_icon.png" alt="#" /></a> </li> -->
               </ul>
             </nav>
           </div>
@@ -133,8 +142,11 @@ crossorigin="anonymous"></script>
                     try {
                         const apiKey = '2zZLR2UK31v6wa9501nW1ykjW9PB3tAf';
                         const symbols = ['NVDA','AAPL','GOOGL','MSFT','AMZN','TSLA','FB','NFLX','JPM','JNJ','V','WMT','PG','DIS','MA', 'UNH', 'HD', 'PYPL', 'VZ', 'ADBE'];
+            
                         const baseUrl = https://api.polygon.io/v2/aggs/ticker;
+            
                         let content = '';
+                        
                         for (let symbol of symbols) {
                             const response = await fetch(${baseUrl}/${symbol}/prev?adjusted=true&apiKey=${apiKey});
                             const data = await response.json();
@@ -144,7 +156,7 @@ crossorigin="anonymous"></script>
                                 const change = result.c - result.o;
                                 const changePercent = ((change / result.o) * 100).toFixed(2);
                                 const changeClass = change >= 0 ? 'green' : 'red';
-                                content += <span class="${changeClass}"><a href="https://finance.yahoo.com/quote/${symbol}/">${symbol}: ${result.c.toFixed(2)} (${changePercent}%)</a></span> ;
+                                content += <span class="${changeClass}">${symbol}: ${result.c.toFixed(2)} (${changePercent}%)</span> ;
                             }
                         }
             
@@ -205,8 +217,10 @@ crossorigin="anonymous"></script>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active"> <img class="first-slide" src="images/banner2.png" alt="First slide"> </div>
+            <div class="carousel-item"> <img class="second-slide" src="images/banner1.jpg" alt="Second slide"> </div>
+            <div class="carousel-item"> <img class="third-slide" src="images/banner.jpg" alt="Third slide"> </div>
           </div>
-        </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <i class='fa fa-angle-right'></i></a> <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <i class='fa fa-angle-left'></i></a> </div>
         <!-- end banner --> 
       </div>
       <div class="col-md-6">
@@ -533,11 +547,53 @@ crossorigin="anonymous"></script>
             <div class="icon"> <i> <a href="https://x.com/XBAHATIBlaise" target="_blank"><img src="images/twitter.png"></a></i> <i> <a href="https://www.instagram.com/bahatiblaise44/" target="_blank"><img src="images/instagram.png"></a></i> </div>
           </div>
         </div>
+        <!-- <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+          <div class="experts-threebox">
+            <figure><img src="images/experts-2.jpg" alt="img"/></figure>
+            <h3>Sarah o'conner</h3>
+            <span>CEO</span>
+            <p>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
+            <div class="icon"> <i> <a href="#"><img src="images/facebook.png"></a></i> <i> <a href="#"><img src="images/Twitter.png"></a></i> <i> <a href="#"><img src="images/linkedin.png"></a></i> <i> <a href="#"><img src="images/instagram.png"></a></i> </div>
+          </div>
+        </div> -->
       </div>
     </div>
   </div>
 </div>
+<!-- end abouts -->
+<!-- <div class="Request">
+  <div class="container"> -->
+<!--     <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage3">
+          <h2>Request A call</h2>
+        </div>
+      </div>
+    </div> -->
+<!--     <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <form action="" method="post">
+          <input class="form-control" name="name" placeholder="Name" type="Name">
+          <input class="form-control" name="phone" placeholder="Phone" type="Phone">
+          <input class="form-control" name="email" placeholder="Email" type="Email">
+          <textarea class="textarea" name="message" placeholder="Message" ></textarea>
+          <button type="submit" name="send" class="send-btn">Send</button>
+        </form>
+      </div> -->
+<!--       <div style="margin: auto" class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="Request-box">
+          <figure><img src="images/Request.jpg" alt="img"/></figure>
+          <div class="Register">
+            <h3>Get started with KNOWN Corp Now!</h3>
+            <p>To get started with KNOWN Corpe you have to access to our services.</p>
+            <a href="services.html">Access Our services</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
 
+<!-- footer -->
 <footer>
   <div class="footer">
     <div class="container">
@@ -545,15 +601,17 @@ crossorigin="anonymous"></script>
     </div>
   </div>
 </footer>
-
+<!-- end footer --> 
+<!-- Javascript files--> 
 <script src="js/jquery.min.js"></script> 
 <script src="js/popper.min.js"></script> 
 <script src="js/bootstrap.bundle.min.js"></script> 
-<script src="js/jquery-3.7.1.min.js"></script> 
+<script src="js/jquery-3.0.0.min.js"></script> 
 <script src="js/plugin.js"></script> 
 
-
+<!-- sidebar --> 
 <script src="js/jquery.mCustomScrollbar.concat.min.js"></script> 
 <script src="js/custom.js"></script>
+<script type="text/javascript"> var infolinks_pid = 3421612; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </body>
 </html>
