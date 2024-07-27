@@ -20,8 +20,7 @@
          margin: 0px 0px;
     }
      .menu-area-main {
-         height: 256px;
-         overflow-y: auto;
+         height: 50px;
     }
      .megamenu>.row [class*="col-"] {
          padding: 0px;
@@ -256,9 +255,6 @@
      ul.contant_icon {
         margin-bottom: 20px;
     }
-    header {
-    border-top: solid #ad2100 5px
-}
 }
  @media (max-width: 575px) {
      .logo {
