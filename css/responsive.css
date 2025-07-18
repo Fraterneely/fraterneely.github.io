@@ -1,355 +1,291 @@
-/*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
-/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
- @media only screen and (min-width: 768px) and (max-width: 991px) {
-     .main-menu ul>li a {
-         padding: 20px 20px 20px;
+/* KNOWN Corp - Responsive Styles */
+
+/* Large Devices (Desktops) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
     }
-     .header-search {
-         padding: 15px 0px;
-    }
-}
-/*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
- @media only screen and (min-width: 599px) and (max-width: 767px) {
-     .logo {
-         text-align: center;
-    }
-     .cart-content-right {
-         padding-bottom: 5px;
-    }
-     .mg {
-         margin: 0px 0px;
-    }
-     .menu-area-main {
-         height: 50px;
-    }
-     .megamenu>.row [class*="col-"] {
-         padding: 0px;
-    }
-     .menu-area-main .megamenu .men-cat {
-         padding: 0px 15px;
-    }
-     .menu-area-main .megamenu .women-cat {
-         padding: 0px 15px;
-    }
-     .menu-area-main .megamenu .el-cat {
-         padding: 0px 15px;
-    }
-     .mean-container .mean-nav ul li a.mean-expand {
-         height: 19px;
-    }
-     .category-box.women-box {
-         display: none;
-    }
-     .cart-box {
-         display: inline-block;
-         margin: 0px 30px;
-    }
-     .wish-box {
-         float: none;
-         margin: 0px 30px;
-         display: inline-block;
-    }
-     .menu-add {
-         display: none;
-    }
-     .category-box {
-         display: none;
-    }
-     .mean-container .mean-nav ul li ol {
-         padding: 0px;
-    }
-     .mean-container .mean-nav ul li a {
-         padding: 10px 20px;
-         width: 94.8%;
-    }
-     .mean-container .mean-nav ul li li a {
-         width: 92%;
-         padding: 1em 4%;
-    }
-     .mean-container .mean-nav ul li li li a {
-         width: 100%;
-    }
-     .header-search {
-         padding: 15px 0px;
-    }
-     #collapseFilter.d-md-block {
-         padding: 30px 0px;
-    }
-}
-/*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
- @media only screen and (min-width: 280px) and (max-width: 599px) {
-     .cart-content-right {
-         padding-bottom: 5px;
-    }
-     .megamenu>.row [class*="col-"] {
-         padding: 0px;
-    }
-     .menu-area-main .megamenu .men-cat {
-         padding: 0px 15px;
-    }
-     .menu-area-main .megamenu .women-cat {
-         padding: 0px 15px;
-    }
-     .menu-area-main .megamenu .el-cat {
-         padding: 0px 15px;
-    }
-     .mean-container .mean-nav ul li a {
-         padding: 1em 4%;
-         width: 92%;
-    }
-     .mean-container .mean-nav ul li li a {
-         width: 90%;
-         padding: 1em 5%;
-    }
-     .mean-container .sub-full.megamenu-categories ol li a {
-         padding: 5px 0px;
-         text-transform: capitalize;
-         width: 100%;
-    }
-     .megamenu .sub-full.megamenu-categories .women-box .banner-up-text a {
-         width: auto;
-         border: none;
-         float: none;
-    }
-     .menu-area-main {
-         height: 50px;
-    }
-     .mean-container .mean-nav ul li a.mean-expand {
-         top: 0;
-    }
-    .main-menu ul > li a {
-      padding: 0px 3px 0 36px;
-      line-height: 20px;
-      font-size: 13px;
-      display: block;
-      font-weight: 500;
-      color: #616361;
-      text-transform: uppercase;
-    }
-    nav.main-menu {
-      margin: auto;
-      float: none;
-    }
-}
- @media (min-width: 992px) and (max-width: 1199px) {
-     .main-menu ul > li a {
-        padding: 54px 12px 0 12px;
-    }
-     .full-slider_cont h1 {
-        font-size: 51px;
-         line-height: 61px;
-    }
-     .Currency .three-box .Bitcoin {
-        width: 253px;
-    }
-     .abouts .abouts-bg .abouts-us h3 {
-        font-size: 35px;
-    }
-     .Request-box .Register {
-        padding: 90px 39px;
-    }
-     .Request .Request-box .Register h3 {
-        font-size: 26px;
-         line-height: 35px;
-    }
-     ul.socil_link li {
-        padding-right: 20%;
-    }
-     .footer .newsletter .subscribe {
-        padding: 21px 0;
-         width: 145px;
-    }
-}
- @media (min-width: 768px) and (max-width: 991px) {
-     .main-menu ul > li a {
-         padding: 54px 12px 0 12px;
-    }
-     .full-slider_cont h1{
-        font-size: 40px;
-         line-height: 50px;
-    }
-     .Currency .three-box .Bitcoin {
-        width: 182px !important;
-    }
-     .Currency .three-box .Bitcoin h3 {
-        font-size: 25px;
-    }
-     .experts .experts-box .experts-threebox .icon i a {
-        padding: 0px 2px;
-    }
-     .main_bt {
-        margin-right: 15px;
-         padding: 10px 41px 10px 41px;
-    }
-     .Request-box .Register {
-        padding: 52px 55px;
-    }
-     .Request .Request-box .Register h3 {
-        font-size: 16px;
-         line-height: 23px;
-    }
-     .Request .Request-box .Register p {
-        line-height: 18px;
-         font-size: 14px;
-    }
-     .Request .Request-box .Register a {
-        padding: 5px 25px;
-    }
-     .abouts .abouts-bg {
-        padding-left: 0;
-    }
-     .abouts .abouts-bg .abouts-us h3 {
-        font-size: 26px;
-         line-height: 33px;
-    }
-     .abouts-us p {
-        padding-top: 0;
-    }
-     .abouts .abouts-bg .abouts-us {
-        margin-top: 0;
-         margin-bottom: 0;
-    }
-     ul.socil_link li {
-        padding-right: 15%;
-    }
-     .footer .newsletter .subscribe {
-        padding: 21px 0;
-         width: 113px;
-    }
-}
- @media (min-width: 576px) and (max-width: 767px){
-     .mean-container .mean-bar {
-        margin-top: 40px;
-    }
-     .mean-last {
-         display: none;
-    }
-     .experts .experts-box .experts-threebox {
-        margin-bottom: 20px;
-    }
-     .Currency .three-box {
-        margin-bottom: 20px;
-    }
-     .Currency .titlepage h2 {
-        line-height: 35px;
-         font-size: 35px;
-    }
-     .service-box {
-        margin-top: 30px;
-    }
-     .send-btn{
-        margin-top: 20px;
-    }
-     .head-top {
-         display: none;
-    }
-     .abouts .abouts-bg {
-        margin-top: 0;
-    }
-     .abouts .abouts-bg {
-        padding-left: 0;
-    }
-     .abouts .abouts-bg .abouts-us {
-        margin-top: 0px;
-         margin-bottom: 0px;
-    }
-     .abouts .abouts-bg .abouts-us h3 {
-        font-size: 40px;
-         line-height: 40px;
-         padding-top: 0;
-    }
-     .abouts .abouts-bg .abouts-us p {
-        padding-top: 0;
-    }
-     .Request-box .Register {
-        padding: 81px 55px;
-    }
-     ul.contant_icon {
-        margin-bottom: 20px;
-    }
-}
- @media (max-width: 575px) {
-     .logo {
-        float: none;
-    }
-     .mean-container .mean-bar {
-        margin-top: 0;
-    }
-     .mean-last {
-        display: none;
-    }
-     .head-top {
-         display: none;
-    }
-     .full-slider_cont h1 {
-        font-size: 32px;
-         line-height: 46px;
-    }
-     .main_bt {
-        padding: 5px 24px 5px 24px;
-         margin-right: 10px;
-    }
-     .service-box {
-        margin-top: 30px;
-    }
-     .Currency .titlepage h2 {
-        line-height: 25px;
-         font-size: 24px;
-    }
-     .Currency .three-box {
-        margin-bottom: 20px;
-    }
-     .Currency .three-box .Bitcoin {
-         width: 345px;
-    }
-     .abouts .abouts-bg {
-         margin-top: 0;
-    }
-     .abouts .abouts-bg {
-         padding-left: 0;
-    }
-     .abouts .abouts-bg .abouts-us {
-        margin-top: 0px;
-         margin-bottom: 0px;
-    }
-     .abouts .abouts-bg .abouts-us h3 {
-        font-size: 23px;
-         line-height: 21px;
-         padding-top: 0;
-    }
-     .experts .experts-box .experts-threebox {
-        margin-bottom: 20px;
-    }
-     .abouts-us p {
-        padding-top: 0px;
-    }
-     .Request-box .Register {
-        padding: 50px 30px;
-    }
-     .Request .Request-box .Register h3 {
-        font-size: 13px;
-         line-height: 21px;
-    }
-     .Request .Request-box .Register p {
-        line-height: 16px;
-         font-size: 12px;
-    }
-     .Request .Request-box .Register a {
-        padding: 5px 25px;
-         margin-top: 15px;
-    }
-     .send-btn{
-        margin-top: 20px;
-    }
-     .footer .newsletter .subscribe {
-        width: 120px;
-         padding: 21px 0;
-    }
-     ul.contant_icon {
-        margin-bottom: 20px;
-    }
-    header {
     
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-image img {
+        max-width: 90%;
+    }
+    
+    .about-image img {
+        max-width: 90%;
+    }
 }
+
+/* Medium Devices (Tablets) */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    header {
+        padding: 15px 0;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .main-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--background-color);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 100;
+    }
+    
+    .main-menu.active {
+        max-height: 400px;
+    }
+    
+    .menu-area-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .menu-area-main li {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .menu-area-main li a {
+        display: block;
+        padding: 8px 0;
+    }
+    
+    .hero-section {
+        padding: 80px 0 60px;
+    }
+    
+    .hero-content {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .button-group {
+        justify-content: center;
+    }
+    
+    .about-content, .vision-content {
+        margin-bottom: 30px;
+    }
+    
+    .about-image, .vision-image {
+        text-align: center;
+    }
+    
+    .team-card, .project-card, .value-card {
+        margin-bottom: 30px;
+    }
+    
+    .footer-logo, .footer-links, .footer-contact {
+        margin-bottom: 30px;
+    }
+}
+
+/* Small Devices (Landscape Phones) */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p.lead {
+        font-size: 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .process-step {
+        margin-bottom: 30px;
+    }
+    
+    .contact-form {
+        margin-bottom: 30px;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .founder-card {
+        margin-bottom: 30px;
+    }
+    
+    .join-content {
+        margin-bottom: 30px;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media (max-width: 575px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .button-group .primary-btn, 
+    .button-group .secondary-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .page-banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.9rem;
+    }
+    
+    .project-timeline {
+        flex-direction: column;
+    }
+    
+    .project-timeline p {
+        margin-bottom: 10px;
+    }
+    
+    .feature-list li {
+        font-size: 0.9rem;
+    }
+    
+    .benefits-list li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Menu Toggle Button Styles */
+.menu-toggle {
+    display: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu-toggle span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--primary-color);
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.menu-toggle span:nth-child(1) {
+    top: 0px;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 8px;
+}
+
+.menu-toggle span:nth-child(3) {
+    top: 16px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 99;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--text-color);
+}
+
+/* Sticky Header */
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
  
