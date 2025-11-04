@@ -13,15 +13,18 @@
 ---------------------------------------------------------------------*/
 
 :root {
-  --primary-color: #1E3A8A;
-  --secondary-color: #3B82F6;
-  --text-color: #1F2937;
-  --light-text: #6B7280;
-  --background-color: #FFFFFF;
-  --light-background: #F9FAFB;
-  --border-color: #E5E7EB;
-  --success-color: #10B981;
-  --error-color: #EF4444;
+  /* KNOWN Corporation Core Brand Colors */
+  --primary-color: #000000;         /* Black (Primary Text / Main Brand Color) */
+  --secondary-color: #0047AB;       /* Deep Cobalt (Accent Color for CTAs/Highlights) */
+  --text-color: #000000;            /* Black (Primary Body Text) */
+  --light-text: #4D4D4D;            /* Dark Grey (Subtle Text / Icon Mid-Tone) */
+  --background-color: #FFFFFF;      /* White (Primary Background) */
+  --light-background: #F9FAFB;      /* Near White (Subtle Background for Sections) */
+  
+  /* System/UI Colors (Keeping these standards unless specified otherwise) */
+  --border-color: #E5E7EB;          /* Light border */
+  --success-color: #10B981;         /* Standard Green for Success */
+  --error-color: #EF4444;           /* Standard Red for Error */
   --transition: all 0.3s ease;
 }
 
