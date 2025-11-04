@@ -521,10 +521,12 @@ header {
   
   .footer-logo {
 	margin-bottom: 20px;
+  text-align: center;
+  align-items: center;
   }
   
   .footer-logo img {
-	max-height: 50px;
+	max-height: 200px;
 	margin-bottom: 15px;
   }
   
@@ -640,6 +642,7 @@ header {
 	}
 	
 	.about-image {
+    max-width: 50%;
 	  margin-bottom: 30px;
 	}
 	
