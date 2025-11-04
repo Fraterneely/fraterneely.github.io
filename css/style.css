@@ -514,8 +514,8 @@ header {
   
   /* Footer */
   .footer {
-	background-color: var(--text-color);
-	color: white;
+	background-color: var(--background-color);
+	color: var(--text-color);
 	padding: 70px 0 20px;
   }
   
@@ -530,7 +530,7 @@ header {
   
   .footer-links h3, 
   .footer-contact h3 {
-	color: white;
+	color: var(--primary-color);
 	font-size: 1.2rem;
 	margin-bottom: 20px;
 	position: relative;
@@ -588,12 +588,12 @@ header {
 	height: 40px;
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
-	color: white;
+	color: var(--primary-color);
 	transition: var(--transition);
   }
   
   .footer-social a:hover {
-	background-color: var(--primary-color);
+	background-color: var(--light-background);
   }
   
   .footer-bottom {
